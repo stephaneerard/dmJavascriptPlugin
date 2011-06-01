@@ -11,8 +11,20 @@ var dm_configuration = {"relative_url_root":"","dm_core_asset_root":"\/dmCorePlu
 
 Add Javascript code at the very end of your page, using
 
-  $this->js->code('alert(?);', array('hello'));
+  $js->code('alert(?);', array('hello'));
   
 Which will result in something like :
 
   /* <![CDATA[ */;(function($){$(document).ready(function(){alert("hello");});})(jQuery);/* ]]> */
+  
+  
+  
+The $js object is an instance of dmJavascript, which is available as a service under the name of dm_javascript !
+
+Get it within an action's method scope, a record's method scope :
+
+  $this->getService('dm_javascript');
+  
+Get it within a template scope :
+
+  $sf_context->get('dm_javascript');
