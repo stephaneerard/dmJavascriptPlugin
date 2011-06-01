@@ -1,0 +1,8 @@
+parameters:
+  dm_javascript.class:            dmJavascript
+  
+services:
+  dm_javascript:
+    class:                        %dm_javascript.class%
+    shared:                       true
+    arguments:                    [@dispatcher]

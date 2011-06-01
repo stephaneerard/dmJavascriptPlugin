@@ -1,0 +1,18 @@
+This plugin will allow you to do things such as :
+
+Augment the dm_configuration object of Diem, using
+
+  $js->config(array('do_not_hide_fieldsets' => true));
+  
+Which will result in something like :
+
+var dm_configuration = {"relative_url_root":"","dm_core_asset_root":"\/dmCorePlugin\/","script_name":"\/admin_dev.php\/","debug":true,"culture":"fr","dateFormat":"dd\/mm\/yy","module":"companyCoreAdmin","action":"edit","authenticated":true,"do_not_hide_fieldsets":true,"record_id":"6"};
+
+
+Add Javascript code at the very end of your page, using
+
+  $this->js->code('alert(?);', array('hello'));
+  
+Which will result in something like :
+
+  /* <![CDATA[ */;(function($){$(document).ready(function(){alert("hello");});})(jQuery);/* ]]> */
