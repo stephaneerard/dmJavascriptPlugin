@@ -65,7 +65,7 @@ class dmJavascript implements dmJavascriptInterface
 
 	protected function listenCode()
 	{
-		if(!$this->listening)
+		if(!$this->listening_code)
 		{
 			$this->listening_code = true;
 			$this->dispatcher->connect('dm.layout.filter_javascripts_codes', array($this, 'listenToLayoutFilterConfigEventForCode'));
