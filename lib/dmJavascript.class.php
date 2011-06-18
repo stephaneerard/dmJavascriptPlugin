@@ -56,7 +56,7 @@ class dmJavascript implements dmJavascriptInterface
 	 * @param array $args
 	 * @return dmJavascript
 	 */
-	public function code($callable, $args)
+	public function code($callable, $args = array())
 	{
 		$this->listenCode();
 		$this->_code[] = array('callable' => $callable, 'args' => $args);
