@@ -11,15 +11,15 @@ function _get_dm_js()
 
 function dm_js_call()
 {
-	$args = array_slite(func_get_args(), 1);
+	$args = array_slice(func_get_args(), 1);
 	
 	return _get_dm_js()->code($callable, $args);
 }
 
 function dm_js_config()
 {
-	$args = array_slite(func_get_args(), 1);
+	$args = array_slice(func_get_args(), 1);
 	
-	return _get_dm_js()->config($callable, $args);
+	return _get_dm_js()->config($args);
 	
 }
